@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # 02_install_ec_axb35_dkms.sh
 # Installs the ec_su_axb35 kernel module via DKMS with MOK signing.
-# Must be run from the scripts/ directory inside the cloned ec-su_axb35-linux repo.
+# Must be run from the contrib/ubuntu/ directory inside the cloned ec-su_axb35-linux repo.
 # Requires 01_setup_dkms_mok.sh to have been run and MOK enrolled at boot.
 
 set -euo pipefail
@@ -22,7 +22,7 @@ MOK_CERT="/var/lib/shim-signed/mok/MOK.der"
 
 # Resolve repo root from script location
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
+REPO_ROOT="$(cd "${SCRIPT_DIR}/.." && cd .. && pwd)"
 
 # Sanity check we're in the right repo
 [[ -f "${REPO_ROOT}/Makefile" && -f "${REPO_ROOT}/Kbuild" ]] \

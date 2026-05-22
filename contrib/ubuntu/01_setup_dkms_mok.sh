@@ -63,7 +63,7 @@ echo "  4. Select 'Yes'"
 echo "  5. Enter the password you just set"
 echo "  6. Select 'Reboot'"
 echo ""
-echo "After reboot, run: sudo bash 02_install_ec_axb35_dkms.sh"
+echo "After reboot, run: sudo bash contrib/ubuntu/02_install_ec_axb35_dkms.sh"
 echo ""
 read -rp "Reboot now? [y/N] " doreboot
 if [[ "$doreboot" =~ ^[Yy]$ ]]; then
