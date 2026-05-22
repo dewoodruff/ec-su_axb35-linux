@@ -3,6 +3,7 @@
 # Installs the ec_su_axb35 kernel module via DKMS with MOK signing.
 # Must be run from the contrib/ubuntu/ directory inside the cloned ec-su_axb35-linux repo.
 # Requires 01_setup_dkms_mok.sh to have been run and MOK enrolled at boot.
+# Tested under Ubuntu 26.04
 
 set -euo pipefail
 

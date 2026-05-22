@@ -2,6 +2,7 @@
 # 01_setup_dkms_mok.sh
 # Sets up DKMS and enrolls a MOK key for secure boot module signing.
 # Run this first, then reboot and complete MOK enrollment before running script 2.
+# Tested under Ubuntu 26.04
 
 set -euo pipefail
 
